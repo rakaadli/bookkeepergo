@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"book_keeper_go/entity"
+	"bookkeepergo/entity"
 	"github.com/stretchr/testify/mock"
 )
 

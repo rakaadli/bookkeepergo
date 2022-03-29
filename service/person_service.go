@@ -1,8 +1,8 @@
 package service
 
 import (
-	"book_keeper_go/entity"
-	"book_keeper_go/repository"
+	"bookkeepergo/entity"
+	"bookkeepergo/repository"
 	"errors"
 )
 

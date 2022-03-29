@@ -1,8 +1,8 @@
 package service
 
 import (
-	"book_keeper_go/entity"
-	"book_keeper_go/repository"
+	"bookkeepergo/entity"
+	"bookkeepergo/repository"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"testing"
@@ -23,15 +23,15 @@ func TestCategoryService_GetNotFound(t *testing.T) {
 }
 
 func TestCategoryService_GetSuccess(t *testing.T) {
-	category := entity.Person{
+	person := entity.Person{
 		Id:   "1",
 		Name: "Laptop",
 	}
-	personRepository.Mock.On("FindById", "2").Return(category)
+	personRepository.Mock.On("FindById", "2").Return(person)
 
 	result, err := personService.Get("2")
 	assert.Nil(t, err)
 	assert.NotNil(t, result)
-	assert.Equal(t, category.Id, result.Id)
-	assert.Equal(t, category.Name, result.Name)
+	assert.Equal(t, person.Id, result.Id)
+	assert.Equal(t, person.Name, result.Name)
 }
